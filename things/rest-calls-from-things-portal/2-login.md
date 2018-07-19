@@ -1,12 +1,13 @@
-# Message 1
+# Sent from TTN Portal
 
 https://account.thethingsnetwork.org/users/login
 
 ```json
 POST https://account.thethingsnetwork.org/api/v2/users/login
 {
-  "username": "SteveAtSentosaTTN",
-  "password": "somePasswordInTheClear"
+
+  "username": "SteveAtSentosaTTN",   "maps to" : "users:username",
+  "password": "somePassword",        "maps to" : "users:passwordHash", "note" : "TTN expects PW in the clear"
 }
 ```
 
@@ -28,3 +29,7 @@ session: eyJ1c2VyIjoiNWI1MGI3NzJhMWEzNDUwMDMyOWNiYjAwIn0=...
 session.sig: rZcQ3PpQwUz1Q-dUddXPt_Dyic8
 session_id: a6KVqF30FXU6Xm
 ```
+
+# Documentation
+
+> did not find any for login

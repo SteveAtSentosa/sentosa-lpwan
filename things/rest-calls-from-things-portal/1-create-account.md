@@ -1,14 +1,13 @@
+# Sent from TTN Portal
 
-TTN portal page: https://account.thethingsnetwork.org/register
-
-# Message 1
+https://account.thethingsnetwork.org/register
 
 ```json
 POST https://account.thethingsnetwork.org/api/v2/users
 {
-  "email": "ttn@sentosatech.com",
-  "username": "SteveAtSentosaTTN",
-  "password": "somePassword"
+  "username": "SteveAtSentosaTTN",   "maps to" : "users:username",
+  "email": "ttn@sentosatech.com",    "maps to" : "users:email",
+  "password": "somePassword",        "maps to" : "users:passwordHash", "note" : "TTN expects PW in the clear"
 }
 rsp:
 {
@@ -25,8 +24,12 @@ rsp:
 }
 ```
 
-rsp cookies
+rsp cookies:
 ```
 session: eyJ1c2VyIjoiNWI1MGQxNzFhMWEzNDUwMDMyOWNjMDQxIn0...
 session.sig: FLzDtVjDuyb77TV13VlIHXQUfzk
 ```
+
+# Documentation
+
+> did not find any for create account

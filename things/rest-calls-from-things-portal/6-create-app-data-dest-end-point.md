@@ -1,7 +1,7 @@
 
 TTN Portal Page: https://console.thethingsnetwork.org/applications/stc-app-1/integrations
 
-# Message 1
+# Sent from TTN Portal
 
 ```
 POST https://console.thethingsnetwork.org/api/applications/stc-app-1/integrations/http-ttn
