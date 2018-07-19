@@ -2,6 +2,7 @@
 
 ### Create Company
 
+```
 Company Name : `companies:name`
 Admin User Name: `users:username`
 Admin User Password: `users:passwordHash`
@@ -9,16 +10,19 @@ Admin User Email Address: `users:email`
 Network Types: (checkbox) `networkTypes:name` / `companyNetworkTypeLinks:companyId<>networkTypeId`
   LoRa:
     LoRaWan Region: `companyNetworkTypeLinks:networkSettings: {serviceProfile:{region}}`
-
+```
 
 ### Create User
 
+```
 User Name: `users:username`
 Email: `users:email`
 Password: `users:passwordHash`
+```
 
 ### Create Application
 
+```
 CompanyId (implicit by logged in user): `applications:companyId`
 App Name: `applications:name`
 App Description: `applications:description`
@@ -27,9 +31,11 @@ Reporting Protocol: `applications:reportingProtocolId`
 Network Types: (checkbox) `networkTypes:name` / `applicationNetworkTypeLinks:applicationId<>networkTypeId`
   LoRa:
     Payload Codec: `applicationNetworkTypeLinks:networkSettings: {payloadCodec}`
+```
 
 ### Create Device Profile
 
+```
 CompanyId (implicit by logged in user): `deviceProfiles:companyId`
 Device Profile Name: `deviceProfiles:name`
 Device Profile Description: `deviceProfiles:description`
@@ -46,9 +52,11 @@ Network Types: (checkbox) `networkTypes:name` / `deviceProfiles:networkTypeId`
              Factory Preset Frequencies (list): `deviceProfiles:networkSettings:{factoryPresetFreqs}`
     Class-C: Supports Class-C (y/n): `deviceProfiles:networkSettings:{supportsClassC}`
              Class-C Confirmed Downlink Timeout: `deviceProfiles:networkSettings:{classCTimeout}`
+```
 
 ### Create Device
 
+```
 Application Id (implicit by selected app): `devices:applicationId`
 Device Name: `devices:name`
 Device Description: `devices:description`
@@ -64,12 +72,14 @@ Network Types: (checkbox) `networkTypes:name` / `deviceNetworkTypeLinks:deviceId
     Downlink Frame Counter: `deviceNetworkTypeLinks:networkSettings:{fCntDown}`
     Disable Frame Counter Validation (y/n): `deviceNetworkTypeLinks:networkSettings:{skipFCntCheck}`
     ??? : `deviceNetworkTypeLinks:networkSettings:{isABP}`
-
+```
 
 
 ### lpwan UI operations that don't result in external messaging
 
+```
 Create Network Type
 Create Network Provider
 Create Network Protocols
 Create Network
+```
