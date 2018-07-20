@@ -7,6 +7,9 @@ https://www.thethingsnetwork.org/docs/network/account/
 In order to use the API, you need to request a
 [client ID](https://www.thethingsnetwork.org/docs/network/account/clientid.html)
 
+DJS:  So what I said before was kinda right kinda not.  The Company can be the account, but the access keys are per application not per account.  So they are not excatly like users.  
+
+
 ## Create an application on the account server
 `POST /applications`
 ```
