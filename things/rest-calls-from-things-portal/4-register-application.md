@@ -16,7 +16,7 @@ headers:
 body:
 ```json
 {
-  "handler": "ttn-handler-eu", "maps to" : "?", "note" : "new ui input needed?"
+  "handler": "ttn-handler-eu", "maps to" : ?, "note" : "new ui input needed?"
 }
 ```
 

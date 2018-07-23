@@ -17,8 +17,8 @@ headers
 body:
 ```json
 {
-  "dev_id": "stc-dev-1",          "maps to" : "?", "note" : "not sure if this had to be globally unique to TTN",
-  "app_eui": "70B3D57ED0010C49",  "maps to" : "?", "note" : "see applicaiton create notes",
+  "dev_id": "stc-dev-1",          "maps to" : ?, "note" : "not sure if this had to be globally unique to TTN",
+  "app_eui": "70B3D57ED0010C49",  "maps to" : ?, "note" : "see applicaiton create notes",
   "dev_eui": "1234567890098765",  "maps to" : "deviceNetworkTypeLinks:networkSettings:{devEUI}",
 }
 ```
