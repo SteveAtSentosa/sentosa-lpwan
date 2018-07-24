@@ -38,8 +38,16 @@
    ```
    You will see the following type of information displayed
    ```
-   Name               URI Secret                    Secret            Scope
-   YOUR-CLIENT-NAME   "your-lpwan-server.com/etc"   oWuDsnpI67x...    [profile apps components gateways]
+   Name               URI Secret                    Secret            ...    Status
+   YOUR-CLIENT-NAME   "your-lpwan-server.com/etc"   oWuDsnpI67x...    ...    Pending
    ```
 
 7. Record the `Name`, and `Secret`, which you will enter into the LPWAN UI when adding the TTN Network to LPWAN
+
+8. You will recieve an email when the client has been activated by the TTN orginzation, at which point you will be able to add TTN as an LPWAN Network
+
+
+
+
+https://account.thethingsnetwork.org/users/authorize?client_id=lpwan-ttn-test&&response_type=code&redirect_uri=http://localhost:3000/admin/networks
+
