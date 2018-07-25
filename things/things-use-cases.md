@@ -21,7 +21,14 @@
 
 8. This directs the browser to the TTN Login Page, at which point LPWAN Owner provides the UserName/PW from step 1, and hits the [Login] button.
 
-9. After succefully providing UserName / Password to the TTN login portal, the browser is redirected back to the LPWAN Portal Networks page and hits [SUBMIT].  At this point, the TTN account and network has been added to LPWAN.
+9. After succefully providing UserName / Password to the TTN login portal, the browser is redirected back to the LPWAN Portal TTN NW Update page, and a third field appears, pre-populated and read-only:
+````
+   Client ID          _______________
+   Client Secret      _______________
+   Authorization Code _______________
+   [Submit]
+````
+The LPWan Owner and hits [SUBMIT].  At this point, the TTN account and network has been added to LPWAN.
 
 
 # LPWAN User Adds an Application
