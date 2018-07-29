@@ -47,7 +47,37 @@
 8. You will recieve an email when the client has been activated by the TTN orginzation, at which point you will be able to add TTN as an LPWAN Network
 
 
-
-
 https://account.thethingsnetwork.org/users/authorize?client_id=lpwan-ttn-test&&response_type=code&redirect_uri=http://localhost:3000/admin/networks
 
+TESTING 7/28/18 by Jim (thought this was worth capturing somewhere):
+After resetting the URI to http://sentosatech.com:3000/admin/networks/oauth, I ran some tests.  In order to redirect to my local lpwanserver, I changed my /etc/hosts file to say sentosatech.com was 127.0.0.1.  Makes for easy testing.
+
+Final working Query:
+https://account.thethingsnetwork.org/users/authorize?client_id=lpwan-ttn-test&&response_type=code&redirect_uri=http://sentosatech.com:3000/admin/networks/oauth
+
+Started with some bad queries, some as mistakes, some on purpose:
+I mistakenly tried subbing the secret code from the client in for "code".  Response:
+http://sentosatech.com:3000/admin/networks/oauth?error=unsupported_response_type&error_description=Unknown%20response_type%20parameter%20passed
+
+I left the localhost URI in the request:
+http://localhost:3000/admin/networks/oauth?error=invalid_request&error_description=Wrong%20RedirectUri%20provided
+
+
+SUCCESS response:
+http://sentosatech.com:3000/admin/networks/oauth?code=xPEpietYrvjpjfSy6hr8d9s-9BOr18TPauq1tX6zMA4
+
+
+If the user chooses to reject the request, rather than accept:
+http://sentosatech.com:3000/admin/networks/oauth?error=access_denied&error_description=User%20denied%20the%20access%20to%20the%20resource
+
+This is tricky to make happen, you have to log in to their UI, find the list of enabled 3rd party accessors (under the account pulldown (upper-right), select settings.  On left select Third Party Clients.)  Then deauthorize.
+
+Before I knew that, I got back to the authorization request screen and select reject.  Looks to me that once you've accepted, you always return a code until you deauthorize.
+http://sentosatech.com:3000/admin/networks/oauth?code=6_kkBiI7VxrUqdOaRkivXDio0vydJsk5po2hw8jn03Q
+
+When I deauthorized via the UI, and then logged in and rejected, I got this:
+http://sentosatech.com:3000/admin/networks/oauth?error=access_denied&error_description=User%20denied%20the%20access%20to%20the%20resource
+
+So, lessons learned:
+1) Just because you have a code, doesn't mean it's valid.  User can revoke at any time via TTN (would be the LPWAN owner account doing that, but still could happen).
+2) Just because the user selects "reject", doesn't mean we won't get a code back.  This MAY be a bug, we MAY get a bogus code, but given the error message when I went through and deactivated, I don't think that's the code is invalid.  Still, just another datapoint that says, if you have a code, it may not be valid.
