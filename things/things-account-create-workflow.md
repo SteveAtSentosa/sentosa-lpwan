@@ -46,9 +46,9 @@
 
 8. You will recieve an email when the client has been activated by the TTN orginzation, at which point you will be able to add TTN as an LPWAN Network
 
-9. If you need to update the URI for the client, you can do it like this
+9. If you need to update the URI for the client, you can do it as shown below (the example below will work for local development)
 ```bash
-$ ttnctl clients edit lpwan-ttn-test --uri http://stc-fake-server.com:3000/admin/networks/oauth
+$ ttnctl clients edit lpwan-ttn-test --uri http://localhost:3000/admin/networks/oauth
  ```
 
 https://account.thethingsnetwork.org/users/authorize?client_id=lpwan-ttn-test&&response_type=code&redirect_uri=http://localhost:3000/admin/networks
