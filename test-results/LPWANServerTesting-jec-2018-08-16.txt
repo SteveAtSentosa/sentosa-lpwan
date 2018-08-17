@@ -2,16 +2,24 @@ Testing results:
 
 - On create, get nasty message about not being authorized.
 
-- tc1 - PASS
+- ttn-c-good
+        PASS
 
-- tc2 - Get error, but not very informative error message.  Looks like
+- ttn-c-bad-url 
+        Get error, but not very informative error message.  Looks like
         server should recognize that 404 indicates bad URL.
+        SPS: error messages not coming back from server.  Dan will fix soon
 
-- tc3 - "Client not found" from TTN
+- ttn-c-bad-client - 
+        "Client not found" from TTN
+        SPS: pass
    
-- tc4 - Similar to tc2 - 401 should indicate bad client secret.
-
-- tc5 & tc6 - TTN basically traps us until un/pw is valid.  No callback.
+- ttn-c-bad-secret
+        Similar to tc2 - 401 should indicate bad client secret.
+        SPS: error messages not coming back from server.  Dan will fix soon
+- ttn-bad-oauth-good-data
+- ttn-bad-oauth-bad-data
+        TTN basically traps us until un/pw is valid.  No callback.
 
 - tc7 (add) - Make sure TTN has 3rd party app deleted.  Reject request.
   - Gets Rejected error from TTN - PASS
