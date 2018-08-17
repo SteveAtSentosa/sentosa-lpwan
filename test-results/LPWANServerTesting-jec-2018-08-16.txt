@@ -12,7 +12,7 @@ Testing results:
 
 - ttn-c-bad-client - 
         "Client not found" from TTN
-        SPS: pass
+        SPS: FE pass.  BE: FAIL. no error message, no auth flag
    
 - ttn-c-bad-secret
         Similar to tc2 - 401 should indicate bad client secret.
