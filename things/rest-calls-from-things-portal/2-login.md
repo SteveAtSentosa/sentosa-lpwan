@@ -5,8 +5,9 @@ https://account.thethingsnetwork.org/users/login
 ```json
 POST https://account.thethingsnetwork.org/api/v2/users/login
 {
-  "username": "SteveAtSentosaTTN",
-  "password": "somePasswordInTheClear"
+
+  "username": "SteveAtSentosaTTN",   "maps to" : "users:username",
+  "password": "somePassword",        "maps to" : "users:passwordHash", "note" : "TTN expects PW in the clear"
 }
 ```
 

@@ -7,7 +7,7 @@ POST https://account.thethingsnetwork.org/api/v2/users
 {
   "username": "SteveAtSentosaTTN",   "maps to" : "users:username",
   "email": "ttn@sentosatech.com",    "maps to" : "users:email",
-  "password": "somePassword",        "maps to" : "users:passwordHash", "note" : "things expects PW in the clear"
+  "password": "somePassword",        "maps to" : "users:passwordHash", "note" : "TTN expects PW in the clear"
 }
 rsp:
 {
