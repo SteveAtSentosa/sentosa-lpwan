@@ -1,0 +1,30 @@
+Testing results:
+
+- On create, get nasty message about not being authorized.
+
+- tc1 - PASS
+
+- tc2 - Get error, but not very informative error message.  Looks like
+        server should recognize that 404 indicates bad URL.
+
+- tc3 - "Client not found" from TTN
+   
+- tc4 - Similar to tc2 - 401 should indicate bad client secret.
+
+- tc5 & tc6 - TTN basically traps us until un/pw is valid.  No callback.
+
+- tc7 (add) - Make sure TTN has 3rd party app deleted.  Reject request.
+  - Gets Rejected error from TTN - PASS
+  
+- tu1 - Same issue as tc5 & 6.  Once logged in, proceeds.
+
+- tu2 - Fixed tc2.  PASS
+
+- tu3 - Fixed tc3.  PASS
+
+- tu4 - Fixed tc4.  PASS
+
+- Maybe add a test case - user revolks 3rd party access.  How does server
+  handle?  UI?
+  
+
